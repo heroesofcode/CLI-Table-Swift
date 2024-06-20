@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "CLITable",
+    platforms: [
+        .macOS(.v10_14)
+    ],
     products: [
         .library(
             name: "CLITable",
