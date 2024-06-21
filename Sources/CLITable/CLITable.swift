@@ -13,10 +13,12 @@ public struct CLITable {
 
     public mutating func addRow(_ row: [String]) {
         guard row.count == headers.count else {
-            print("Número de colunas na linha não corresponde ao número de cabeçalhos")
+            print("Number of columns in row does not match number of headers")
             return
         }
+        
         rows.append(row)
+        
         for (i, cell) in row.enumerated() {
             if cell.count > columnWidths[i] {
                 columnWidths[i] = cell.count
