@@ -4,11 +4,19 @@ public struct CLITable {
     private var headers: [String]
     private var rows: [[String]]
     private var columnWidths: [Int]
+    
+    private let tableColor: TableColor
+    private let textColor: TableColor
 
-    public init(headers: [String]) {
+    public init(
+        headers: [String],
+        tableColor: TableColor = .reset,
+        textColor: TableColor = .reset) {
         self.headers = headers
         self.rows = []
         self.columnWidths = headers.map { $0.count }
+        self.tableColor = tableColor
+        self.textColor = textColor
     }
 
     public mutating func addRow(_ row: [String]) {
@@ -36,7 +44,10 @@ public struct CLITable {
         let print = ShowTable(
             headers: headers,
             rows: rows,
-            columnWidths: columnWidths)
+            columnWidths: columnWidths,
+            tableColor: tableColor,
+            textColor: textColor
+        )
         
         print.showTable()
     }
