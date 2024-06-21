@@ -1,5 +1,7 @@
 ## CLI-Table-Swift
 
+[![Platform Compatibility](https://img.shields.io/badge/Platforms-%20macOS%20-orange)]()
+
 Build Table for command line tools for macOS written in Swift
 
 <img src="https://github.com/heroesofcode/CLI-Table-Swift/blob/develop/assets/example.gif?raw=true">
