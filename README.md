@@ -1,6 +1,8 @@
 ## CLI-Table-Swift
 
+[![CI](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml)
 [![Platform Compatibility](https://img.shields.io/badge/Platforms-%20macOS%20-orange)]()
+[![License](https://img.shields.io/github/license/heroesofcode/CLI-Table-Swift.svg)](https://github.com/heroesofcode/CLI-Table-Swift/blob/main/LICENSE)
 
 Build Table for command line tools for macOS written in Swift
 
