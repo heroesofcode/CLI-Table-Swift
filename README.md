@@ -6,7 +6,7 @@
 
 Build Table for command line tools for macOS written in Swift
 
-<img src="https://github.com/heroesofcode/CLI-Table-Swift/blob/develop/assets/example.gif?raw=true">
+<img src="https://github.com/heroesofcode/CLI-Table-Swift/blob/main/assets/example.gif?raw=true">
 
 ```
 ┌─────────┬─────┬────────────────┐
