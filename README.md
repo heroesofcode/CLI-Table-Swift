@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml)
 [![Platform Compatibility](https://img.shields.io/badge/Platforms-%20macOS%20-orange)]()
-[![License](https://img.shields.io/github/license/heroesofcode/CLI-Table-Swift.svg)](https://github.com/heroesofcode/CLI-Table-Swift/blob/main/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/heroesofcode/CLI-Table-Swift)](https://github.com/heroesofcode/CLI-Table-Swift/blob/main/LICENSE)
 
 Build Table for command line tools for macOS written in Swift
 
@@ -59,6 +59,30 @@ var table = CLITable(headers: headers, tableColor: .blue)
 or
 
 var table = CLITable(headers: headers, textColor: .green)
+```
+
+## Installing
+
+```swift
+dependencies: [
+  .package(
+    url: "https://github.com/heroesofcode/CLI-Table-Swift",
+    from: "1.0.0"
+  ),
+]
+```
+
+```swift
+targets: [
+  .target(name: "MyApp"),
+  .testTarget(
+    name: "MyAppTests",
+    dependencies: [
+      "MyApp",
+      .product(name: "CLITable", package: "CLI-Table-Swift"),
+    ]
+  )
+]
 ```
 
 ## Contributing
