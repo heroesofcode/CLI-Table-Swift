@@ -1,9 +1,9 @@
 import Foundation
 
 public struct CLITable {
-    var headers: [String]
-    var rows: [[String]]
-    var columnWidths: [Int]
+    private var headers: [String]
+    private var rows: [[String]]
+    private var columnWidths: [Int]
 
     private let tableColor: TableColor
     private let textColor: TableColor
