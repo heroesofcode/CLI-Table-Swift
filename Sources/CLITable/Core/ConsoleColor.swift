@@ -13,14 +13,16 @@ public enum TableColor: String {
 func console(
     _ text: String,
     color: TableColor,
-    terminator: String = "\n") {
-        
+    terminator: String = "\n"
+) {
+
     print("\(color.rawValue)\(text)\(TableColor.reset.rawValue)", terminator: terminator)
 }
 
 func colorText(
     _ text: String,
-    color: TableColor) -> String {
-        
-    return "\(color.rawValue)\(text)\(TableColor.reset.rawValue)"
+    color: TableColor
+) -> String {
+
+    "\(color.rawValue)\(text)\(TableColor.reset.rawValue)"
 }
