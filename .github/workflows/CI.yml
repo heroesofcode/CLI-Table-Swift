@@ -24,14 +24,14 @@ jobs:
       run: swift test --enable-code-coverage
       
     - name: Generate coverage report
-        run: |
+      run: |
           xcrun llvm-cov export \
           -format="lcov" \
           .build/debug/CLITablePackageTests.xctest/Contents/MacOS/CLITablePackageTests \
           -instr-profile .build/debug/codecov/default.profdata > coverage_report.lcov
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          fail_ci_if_error: false
-          file: coverage_report.lcov
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: false
+        file: coverage_report.lcov
