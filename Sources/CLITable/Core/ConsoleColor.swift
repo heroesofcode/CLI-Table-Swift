@@ -1,28 +1,47 @@
-public enum TableColor: String {
-    case black = "\u{001B}[0;30m"
-    case red = "\u{001B}[0;31m"
-    case green = "\u{001B}[0;32m"
-    case yellow = "\u{001B}[0;33m"
-    case blue = "\u{001B}[0;34m"
-    case magenta = "\u{001B}[0;35m"
-    case cyan = "\u{001B}[0;36m"
-    case white = "\u{001B}[0;37m"
-    case reset = "\u{001B}[0;0m"
+import Rainbow
+
+public enum TableColor {
+    case black
+    case red
+    case green
+    case yellow
+    case blue
+    case magenta
+    case cyan
+    case white
+    case reset
+    case hex(String)
+    
+    func apply(text: String) -> String {
+        switch self {
+        case .black:
+            return text.black
+        case .red:
+            return text.red
+        case .green:
+            return text.green
+        case .yellow:
+            return text.yellow
+        case .blue:
+            return text.blue
+        case .magenta:
+            return text.magenta
+        case .cyan:
+            return text.cyan
+        case .white:
+            return text.white
+        case .reset:
+            return text
+        case .hex(let hexCode):
+            return text.hex(hexCode)
+        }
+    }
 }
 
-func console(
-    _ text: String,
-    color: TableColor,
-    terminator: String = "\n"
-) {
-
-    print("\(color.rawValue)\(text)\(TableColor.reset.rawValue)", terminator: terminator)
+func console(_ text: String, color: TableColor, terminator: String = "\n") {
+    print(color.apply(text: text), terminator: terminator)
 }
 
-func colorText(
-    _ text: String,
-    color: TableColor
-) -> String {
-
-    "\(color.rawValue)\(text)\(TableColor.reset.rawValue)"
+func colorText(_ text: String, color: TableColor) -> String {
+    return color.apply(text: text)
 }
