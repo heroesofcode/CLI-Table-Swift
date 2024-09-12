@@ -35,3 +35,4 @@ jobs:
       with:
         fail_ci_if_error: false
         file: coverage_report.lcov
+        token: ${{ secrets.CODECOV_TOKEN }}
