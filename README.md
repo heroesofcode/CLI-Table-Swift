@@ -56,12 +56,12 @@ var table = CLITable(headers: headers, tableColor: .hex("#FF5733"), textColor: .
 or
 
 var table = CLITable(headers: headers, tableColor: .blue)
-var table CLITable(headers: headers, tableColor: .hex("#FF5733"))
+var table = CLITable(headers: headers, tableColor: .hex("#FF5733"))
 
 or
 
 var table = CLITable(headers: headers, textColor: .green)
-var table CLITable(headers: headers, textColor: .hex("#2ECC71"))
+var table = CLITable(headers: headers, textColor: .hex("#2ECC71"))
 ```
 
 ## Installing
