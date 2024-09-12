@@ -1,6 +1,8 @@
 ## CLI-Table-Swift
 
 [![CI](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/heroesofcode/CLI-Table-Swift/graph/badge.svg?token=DRwwBttVQh)](https://codecov.io/gh/heroesofcode/CLI-Table-Swift)
+![GitHub Release](https://img.shields.io/github/v/release/heroesofcode/CLI-Table-Swift)
 [![Platform Compatibility](https://img.shields.io/badge/Platforms-%20macOS%20-orange)]()
 [![GitHub License](https://img.shields.io/github/license/heroesofcode/CLI-Table-Swift)](https://github.com/heroesofcode/CLI-Table-Swift/blob/main/LICENSE)
 
@@ -70,7 +72,7 @@ var table = CLITable(headers: headers, textColor: .hex("#2ECC71"))
 dependencies: [
   .package(
     url: "https://github.com/heroesofcode/CLI-Table-Swift",
-    from: "1.0.0"
+    from: "1.1.0"
   ),
 ]
 ```
