@@ -31,7 +31,7 @@ jobs:
           -instr-profile .build/debug/codecov/default.profdata > coverage_report.lcov
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@3.1.6
       with:
         fail_ci_if_error: false
         file: coverage_report.lcov
