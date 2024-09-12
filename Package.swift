@@ -14,9 +14,14 @@ let package = Package(
             targets: ["CLITable"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/onevcat/Rainbow", exact: "4.0.1")
+    ],
     targets: [
         .target(
-            name: "CLITable"),
+            name: "CLITable",
+            dependencies: ["Rainbow"]
+        ),
         .testTarget(
             name: "CLITableTests",
             dependencies: ["CLITable"]

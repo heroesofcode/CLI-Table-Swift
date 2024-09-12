@@ -10,7 +10,7 @@ final class CLITableTests: XCTestCase {
     }
 
     func testAddRows() {
-        var table = CLITable(headers: ["Name", "Age", "City"])
+        var table = CLITable(headers: ["Name", "Age", "City"], tableColor: .blue)
         let rows = [
             ["Alice", "30", "São Paulo"],
             ["Bob", "25", "Rio de Janeiro"],
