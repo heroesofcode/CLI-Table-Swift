@@ -51,14 +51,17 @@ table.showTable()
 To customize the table you can add color to the line and text or just some of them
 ```swift
 var table = CLITable(headers: headers, tableColor: .blue, textColor: .green)
+var table = CLITable(headers: headers, tableColor: .hex("#FF5733"), textColor: .hex("#2ECC71"))
 
 or
 
 var table = CLITable(headers: headers, tableColor: .blue)
+var table CLITable(headers: headers, tableColor: .hex("#FF5733"))
 
 or
 
 var table = CLITable(headers: headers, textColor: .green)
+var table CLITable(headers: headers, textColor: .hex("#2ECC71"))
 ```
 
 ## Installing
