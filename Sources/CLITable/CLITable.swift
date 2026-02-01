@@ -28,10 +28,8 @@ public struct CLITable {
 
         rows.append(row)
 
-        for (i, cell) in row.enumerated() {
-            if cell.count > columnWidths[i] {
-                columnWidths[i] = cell.count
-            }
+        for (index, cell) in row.enumerated() where cell.count > columnWidths[index] {
+            columnWidths[index] = cell.count
         }
     }
 

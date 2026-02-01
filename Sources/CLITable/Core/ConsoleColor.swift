@@ -11,7 +11,7 @@ public enum TableColor {
     case white
     case reset
     case hex(String)
-    
+
     func apply(text: String) -> String {
         switch self {
         case .black:

@@ -25,8 +25,8 @@ final class PrintLine {
 
         console(start, color: tableColor, terminator: "")
 
-        for (i, width) in columnWidths.enumerated() {
-            if i > 0 {
+        for (index, width) in columnWidths.enumerated() {
+            if index > 0 {
                 console(middle, color: tableColor, terminator: "")
             }
 
@@ -43,8 +43,8 @@ final class PrintLine {
     func row(_ row: [String], isHeader: Bool = false) {
         console("│", color: tableColor, terminator: "")
 
-        for (i, cell) in row.enumerated() {
-            let padding = String(repeating: " ", count: columnWidths[i] - cell.count)
+        for (index, cell) in row.enumerated() {
+            let padding = String(repeating: " ", count: columnWidths[index] - cell.count)
 
             let cellText = colorText(" \(cell)", color: textColor)
             let coloredPadding = colorText(padding, color: tableColor)

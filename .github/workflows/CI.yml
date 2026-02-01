@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: macOS-14
+    runs-on: macOS-26
     
     steps:
     - uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
           -instr-profile .build/debug/codecov/default.profdata > coverage_report.lcov
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3.1.6
+      uses: codecov/codecov-action@v5
       with:
         fail_ci_if_error: false
         file: coverage_report.lcov
