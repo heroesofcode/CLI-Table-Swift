@@ -16,6 +16,7 @@ final class CLITableTests: XCTestCase {
             ["Bob", "25", "Rio de Janeiro"],
             ["Carlos", "28", "Belo Horizonte"]
         ]
+        
         table.addRows(rows)
         XCTAssertEqual(table.rows.count, 3)
     }

@@ -1,16 +1,3 @@
-disabled_rules:
-  - line_length
-  - force_try
-  - identifier_name
-  - trailing_whitespace
-  - force_cast
-  - colon
-  - implicit_getter
-  - void_return
-  - unused_enumerated
-  - function_parameter_count
-  - file_length
-  
 vertical_whitespace:
     severity: error
 
