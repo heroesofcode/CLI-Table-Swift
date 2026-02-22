@@ -3,13 +3,13 @@ import XCTest
 
 final class CLITableTests: XCTestCase {
 
-    func testAddRow() {
+    func testAddRow() throws {
         var table = CLITable(headers: ["Name", "Age", "City"])
-        table.addRow(["Alice", "30", "São Paulo"])
+        try table.addRow(["Alice", "30", "São Paulo"])
         XCTAssertEqual(table.rows.count, 1)
     }
 
-    func testAddRows() {
+    func testAddRows() throws {
         var table = CLITable(headers: ["Name", "Age", "City"], tableColor: .blue)
         let rows = [
             ["Alice", "30", "São Paulo"],
@@ -17,14 +17,14 @@ final class CLITableTests: XCTestCase {
             ["Carlos", "28", "Belo Horizonte"]
         ]
         
-        table.addRows(rows)
+        try table.addRows(rows)
         XCTAssertEqual(table.rows.count, 3)
     }
 
-    func testPrintTable() {
+    func testPrintTable() throws {
         var table = CLITable(headers: ["Name", "Age", "City"])
-        table.addRow(["Alice", "30", "São Paulo"])
-        table.addRows([
+        try table.addRow(["Alice", "30", "São Paulo"])
+        try table.addRows([
             ["Bob", "25", "Rio de Janeiro"],
             ["Carlos", "28", "Belo Horizonte"]
         ])
