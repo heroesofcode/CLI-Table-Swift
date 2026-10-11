@@ -1,3 +1,7 @@
+> [!WARNING]
+> This project is no longer maintained.
+> If you want to continue using CLITable, feel free to fork the repository and maintain your own version.
+
 ## CLI-Table-Swift
 
 [![CI](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/CLI-Table-Swift/actions/workflows/CI.yml)
